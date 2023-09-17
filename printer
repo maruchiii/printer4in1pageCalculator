@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main (void)
+{
+    int totalPg, times;
+    int pageNumber[999], evenNumber[999];
+    printf("Total Page is:\n");
+    scanf("%d", &totalPg);
+    times = totalPg/4 +1;
+
+
+for (int i = 1; i < times; i++) {
+pageNumber[i] = i*4;
+//printf("%d", pageNumber[i]);
+}
+for (int k = 1; k < times; k++){
+evenNumber[k] = pageNumber[k] - 3;
+//printf("%d", evenNumber[k]);
+}
+
+for (int y = 1; y < times; y+=2){
+    printf("%d-%d, ", evenNumber[y], pageNumber[y]);
+}
+    printf("\n");
+
+for (int y = 2; y < times; y+=2){
+    printf("%d-%d, ", evenNumber[y], pageNumber[y]);
+}
+
+}
